@@ -11,12 +11,23 @@
         
         <br />
         
-        <p:commandButton id="chartBtn" value="Profiles" type="button" />
+        <p:dataList value="#{profilesBean.profilesList}" var="profile" itemType="disc">
+            #{profile.name}, #{profile.email}, #{profile.facebookAccount}, #{profile.linkedinAccount}, #{profile.instagramAccount}, #{profile.photo}
+        </p:dataList>
         
-        <p:overlayPanel for="chartBtn">
-            <p:dataList value="#{profilesBean.profilesList}" var="profile" itemType="disc">
-                #{profile.name}, #{profile.email}, #{profile.facebookAccount}, #{profile.linkedinAccount}, #{profile.instagramAccount}, #{profile.photo}
-            </p:dataList>
+        <p:commandButton id="messagesPanel" value="Send Message" type="button" />
+        <p:overlayPanel for="messagesPanel">
+            
+            <p>
+            To <p:inputTextarea rows="1" cols="30" minQueryLength="0" 
+                completeMethod="#{MessagesBean.profileNames}"  />
+            </p>
+            <p>
+            <p:inputTextarea value="#{MessagesBean.message}" autoResize="false"/>
+            </p>
+            <p>
+            <p:commandButton action="#{MessagesBean.sendMessage()}" value="Send" type="button" />
+            </p>
         </p:overlayPanel>
  </h:body>
 </html>
