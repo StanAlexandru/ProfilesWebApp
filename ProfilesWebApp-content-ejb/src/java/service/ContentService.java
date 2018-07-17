@@ -9,7 +9,6 @@ package service;
 import dto.ProfileDTO;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
-import javax.ejb.Startup;
 import javax.ejb.Stateless;
 import remote.IContentService;
 //import remote.IContentService;
@@ -19,7 +18,6 @@ import remote.IContentService;
  * @author Andrada_Alex
  */
 @Stateless
-@Startup
 public class ContentService implements IContentService{
     
     @EJB

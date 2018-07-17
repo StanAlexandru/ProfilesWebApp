@@ -26,7 +26,7 @@ public class TestService {
 
     @PostConstruct
     public void init(){
-        System.out.print("profileDao.getProfile(\"Eddy\").getEmail: " + profileDao.getProfile("Eddy").getEmail());
+        System.out.print("TestService - init - profileDao.getProfile(\"Eddy\").getEmail: " + profileDao.getProfile("Eddy").getEmail());
     }
     
 }
