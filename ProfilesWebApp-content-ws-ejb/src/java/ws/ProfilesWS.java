@@ -13,10 +13,6 @@ import javax.jws.WebParam;
 import javax.jws.WebService;
 import remote.IContentService;
 
-/**
- *
- * @author Andrada_Alex
- */
 @WebService
 @Stateless
 public class ProfilesWS {
