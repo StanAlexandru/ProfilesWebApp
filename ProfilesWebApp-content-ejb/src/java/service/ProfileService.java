@@ -19,7 +19,11 @@ import javax.ejb.Stateless;
 public class ProfileService {
     
     @EJB
-    ProfileDao profileDao;
+    private ProfileDao profileDao;
+
+    public void setProfileDao(ProfileDao profileDao) {
+        this.profileDao = profileDao;
+    }
 
     public ProfileDTO getProfile(String name) {
         
