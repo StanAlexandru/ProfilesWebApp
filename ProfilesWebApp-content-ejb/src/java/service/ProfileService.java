@@ -8,13 +8,12 @@ package service;
 import dao.ProfileDao;
 import db.ProfileDB;
 import dto.ProfileDTO;
+import interceptors.LogInterceptor;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.interceptor.Interceptors;
 
-/**
- *
- * @author Andrada_Alex
- */
+@Interceptors({LogInterceptor.class})
 @Stateless
 public class ProfileService {
     

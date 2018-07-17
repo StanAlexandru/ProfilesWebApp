@@ -5,18 +5,15 @@
  */
 package service;
 
-//import dto.ProfileDTO;
 import dto.ProfileDTO;
+import interceptors.LogInterceptor;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.interceptor.Interceptors;
 import remote.IContentService;
-//import remote.IContentService;
 
-/**
- *
- * @author Andrada_Alex
- */
+@Interceptors({LogInterceptor.class})
 @Stateless
 public class ContentService implements IContentService{
     

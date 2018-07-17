@@ -6,16 +6,15 @@
 package service;
 
 import dao.ProfileDao;
+import interceptors.LogInterceptor;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Singleton;
 import javax.ejb.LocalBean;
 import javax.ejb.Startup;
+import javax.interceptor.Interceptors;
 
-/**
- *
- * @author Andrada_Alex
- */
+
 @Singleton
 @LocalBean
 @Startup
