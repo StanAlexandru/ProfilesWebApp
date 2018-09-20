@@ -1,5 +1,9 @@
 # ProfilesWebApp
 
+
+'ProfilesWebApp - UML - 1.0.pdf' includes the high level application architecture.
+
+
 ProfilesWebApp contains:
 1. ProfilesWebApp-content-ejb for JDBC Connection
 2. ProfilesWebApp-content-ws-ejb for SOAP WS
